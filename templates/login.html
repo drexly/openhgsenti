@@ -1,0 +1,42 @@
+{%extends "base.html" %}
+{%block title %}로그인{% endblock %}
+{%block content %}
+<div class="jumbotron" align="center">
+    <form class="form-group" action="" method="POST" {% if form.is_multipart %}enctype="multipart/form-data"{% endif %}>
+        {% csrf_token %}
+        {{ form.media }}
+        {% if form.errors %}
+            <div class="alert alert-dismissible alert-danger">
+                <ul>
+                    {% for error in form.non_field_errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        {% for field in form.visible_fields %}
+            <div class="control-group {{ field.html_name }} {% if field.errors %}error{% endif %}">
+                <label class="control-label"><h3>{{ field.label }}{% ifequal forloop.counter 1 %}(ID){% else %}(PW){% endifequal %}{% if field.field.required %}{% endif %} {{ field }} </h3></label>
+                <div class="controls">
+                    {% if field.errors %}<span class="help-inline">{{ field.errors.as_text }}</span>{% endif %}
+                </div>
+            </div>
+            <br>
+        {% endfor %}
+        {% for field in form.hidden_fields %}
+            {{ field }}
+        {% endfor %}
+
+        {% block formsets %}
+            {% for formset in inlines %}
+                {% include "inline_formset.html" with formset=formset %}
+            {% endfor %}
+        {% endblock formsets %}
+        <div class="form-actions">
+            <input class="btn btn-primary btn-large" type="submit" value="로그인"/>
+            {% block extra_buttons %}
+            {% endblock extra_buttons %}
+        </div>
+    </form>
+</div>
+    {% endblock %}

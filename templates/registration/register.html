@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block title %}오픈한글감성사전 회원 가입{% endblock %}
+{% block head %}<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">{% endblock %}
+{% block content %}
+<legend align="center">오픈한글감성사전 회원 가입<br>API 사용을 위해 아래 항목들을 모두 기입하고 등록해주세요.</legend>
+
+<form method="post" action="." class="form-horizontal">
+{% if form.errors %}
+    <p>가입 오류입니다. {{ form.errors }}  재작성 해주세요.</p>
+
+{% endif %}
+<body>
+
+
+<fieldset>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="id_username" name="username">아이디</label>
+  <div class="col-md-4">
+  <input id="fn" name="{{ form.username.name }}" type="text" placeholder="(영문소문자/숫자, 4~16자)" class="form-control input-md" required="">
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="id_password1">비밀번호</label>
+  <div class="col-md-4">
+  <input id="id_password1" name="{{ form.password1.name }}" type="password" placeholder="(영문 대소문자/숫자 8자~30자)" class="form-control input-md" required="">
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="id_password2">비밀번호 확인</label>
+  <div class="col-md-4">
+  <input id="id_password2" name="{{ form.password2.name }}" type="password" placeholder="비밀번호확인" class="form-control input-md" required="">
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="email">Email</label>
+  <div class="col-md-4">
+  <input id="email" name="{{ form.email.name }}" type="text" placeholder="email" class="form-control input-md" required="">
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="id_rname">이름</label>
+  <div class="col-md-4">
+  <input id="id_rname" name="{{ form.rname.name }}" type="text" placeholder="2~4자 실명" class="form-control input-md" required="">
+
+  </div>
+</div>
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="id_phone">휴대폰 번호</label>
+  <div class="col-md-4">
+  <input id="id_phone" name="{{ form.phone.name }}" type="text" placeholder="휴대폰 번호만 입력 하세요. 예)010-xxxx-xxxx" class="form-control input-md" required="">
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="id_content">사용 목적</label>
+  <div class="col-md-4">
+  <input id="id_content" name="{{ form.content.name }}" type="text" placeholder="사용 소속 및 어느분야에서 어떤 목적으로 쓰시는지 기입해주세요" class="form-control input-md" required="">
+
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="submit"></label>
+  <div class="col-md-4">
+    <button id="submit" name="submit" class="btn btn-primary">가입하기</button>
+  </div>
+</div>
+{% csrf_token %}
+</form>
+{% endblock %}

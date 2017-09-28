@@ -1,0 +1,2 @@
+# only install locally since GAE has its own version
+MySQL-python==1.2.5

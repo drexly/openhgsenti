@@ -1,0 +1,41 @@
+/* Form Error */
+
+.errornote {
+    display: block;
+    margin: 5px 0;
+    border: 1px solid #c30;
+    background: #fcf;
+    padding: 5px 25px;
+    color: #c30;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Authentication Forms */
+
+fieldset {
+    border: 1px solid #ccc;
+}
+
+.aligned label {
+    float: left;
+    width: 170px;
+    padding: 3px 10px 0 0;
+}
+
+.form-row {
+    padding: 10px;
+    font-size: 11px;
+    border-bottom: 1px solid #eee;
+}
+
+.submit-row {
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    text-align: right;
+}
+
+.submit-row input {
+    margin: 10px;
+    background: #ffc;
+}

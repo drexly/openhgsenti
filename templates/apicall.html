@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}오픈한글감성사전 OpenAPI{% endblock %}
+{% block head %}<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">{% endblock %}
+{% block content %}
+<legend align="center">오픈한글감성사전 OpenAPI<br>API 사용을 위해 아래 사항들을 참고해 주세요.</legend>
+
+{% if user.is_authenticated %}
+<h3><div class="alert alert-success" role="alert"><b>요청 GET 방식:</b> http://127.0.0.1:5959/jsonapi/{{ user.username }}/검색하시려는 한국어 문장 및 단어</div></h3>
+{% else %}
+<h3><div class="alert alert-success" role="alert"><b>요청 GET 방식:</b> http://127.0.0.1:5959/jsonapi/회원가입 후 회원ID를 이곳에 기입하세요/검색하시려는 한국어 문장 및 단어</div></h3>
+{% endif %}
+<h3><div class="alert alert-info" role="alert"><b>성공시 JSON 반환:</b><br> {<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; //검색어구<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; "key": "검색하신 한국어 단어 및 문장",<br>
+    <br>
+	&nbsp; &nbsp; &nbsp; &nbsp; //검색어구 집단 감성 평가 반영 샘플 최대 100개 추출<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; "proof": {"평가샘플id": [평가샘플평점(0~10), "평가샘플 내용"],...},<br>
+    <br>
+	&nbsp; &nbsp; &nbsp; &nbsp; //검색어구 관련 28가지 영화 장르 비율 분포<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; "gnr": [["장르명", 분포비율(0~100)], ...],<br>
+    <br>
+	&nbsp; &nbsp; &nbsp; &nbsp; //집단 감성 평가 반영 검색어구 평가 평점<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; "avg": 평점숫자(0~10)<br>
+}</div></h3>
+
+<h3><div class="alert alert-warning" role="alert"><b>검색 결과 없을 경우 JSON 반환:</b><br> {<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; //검색어구<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; "key": "검색하신 한국어 단어 및 문장",<br>
+    <br>
+	&nbsp; &nbsp; &nbsp; &nbsp; //검색어구 집단 감성 평가 반영 개수 0개<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; "proof": {},<br>
+    <br>
+	&nbsp; &nbsp; &nbsp; &nbsp; //검색어구 관련 영화 장르 개수 0개<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; "gnr": [],<br>
+    <br>
+	&nbsp; &nbsp; &nbsp; &nbsp; //집단 감성 평가 반영 검색어구 평가 평점 -1<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; "avg":-1<br>
+}</div></h3>
+<h3><div class="alert alert-danger" role="alert"><b>미등록 apicall일 경우 JSON 반환:</b><br> {<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; //error 정보만 표시<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; "err": "오픈한글감성사전에 등록된 유저가 아닙니다"<br>
+}</div></h3>
+{% endblock %}
