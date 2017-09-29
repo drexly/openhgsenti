@@ -24,4 +24,8 @@ pip3 install elasticsearch
 
 pip3 install json
 
+### run web application
+
+python manage.py runserver 0.0.0.0:5959
+
 
