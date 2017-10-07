@@ -8,7 +8,7 @@
 ## 사이트: http://210.94.194.82:5959
 
 ## 동영상: https://youtu.be/3lgYaszL1Pg
-[![클릭하세요](https://i9.ytimg.com/vi/3lgYaszL1Pg/default.jpg?sqp=CLj8ts4F&rs=AOn4CLBuoKlmjn0rkxCOpjQGsQwI-6L5rw)](https://youtu.be/3lgYaszL1Pg)
+[![클릭하세요](http://i3.ytimg.com/vi/3lgYaszL1Pg/hqdefault.jpg)](https://youtu.be/3lgYaszL1Pg)
 
 위 사진을 클릭하시고 720p 이상으로 보세요
 * * *
