@@ -38,4 +38,25 @@ pip3 install json
 
 python manage.py runserver 0.0.0.0:5959
 
+* * *
+## Final Round Presentation
+
+![http://openhg.ml](/pptimg/ppt_1.png?raw=true "최종심사ppt")
+![http://openhg.ml](/pptimg/ppt_2.png?raw=true "최종심사ppt")
+![http://openhg.ml](/pptimg/ppt_3.png?raw=true "최종심사ppt")
+![http://openhg.ml](/pptimg/ppt_4.png?raw=true "최종심사ppt")
+![http://openhg.ml](/pptimg/ppt_5.png?raw=true "최종심사ppt")
+![http://openhg.ml](/pptimg/ppt_6.png?raw=true "최종심사ppt")
+![http://openhg.ml](/pptimg/ppt_7.png?raw=true "최종심사ppt")
+![http://openhg.ml](/pptimg/ppt_8.png?raw=true "최종심사ppt")
+![http://openhg.ml](/pptimg/ppt_9.png?raw=true "최종심사ppt")
+![http://openhg.ml](/pptimg/ppt_10.png?raw=true "최종심사ppt")
+![http://openhg.ml](/pptimg/ppt_11.png?raw=true "최종심사ppt")
+![http://openhg.ml](/pptimg/ppt_12.png?raw=true "최종심사ppt")
+![http://openhg.ml](/pptimg/ppt_13.png?raw=true "최종심사ppt")
+![http://openhg.ml](/pptimg/ppt_14.png?raw=true "최종심사ppt")
+![http://openhg.ml](/pptimg/ppt_15.png?raw=true "최종심사ppt")
+![http://openhg.ml](/pptimg/ppt_16.png?raw=true "최종심사ppt")
+![http://openhg.ml](/pptimg/ppt_17.png?raw=true "최종심사ppt")
+
 
