@@ -19,6 +19,11 @@ http://project.oss.kr/board/noticeView.do?board_seq=826
 
 https://www.eiric.or.kr/community/post2.php?m=view&gubun=201710&num=12855
 
+## 실 사용 예 Actual API Usage
+
+![http://openhg.ml](/pptimg/use.png?raw=true "실례")
+
+
 ## 사이트: http://openhg.ml
 
 접속 안될 경우: http://175.123.137.223:6969
