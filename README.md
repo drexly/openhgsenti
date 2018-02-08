@@ -19,7 +19,7 @@ http://project.oss.kr/board/noticeView.do?board_seq=826
 
 https://www.eiric.or.kr/community/post2.php?m=view&gubun=201710&num=12855
 
-KSC2017 학부생/주니어논문경진대회 입상자 명단 - 장려상 수상 NO.432
+KSC2017 학부생/주니어논문경진대회 입상자 명단 - 장려상 수상 No. 432
 
 http://www.kiise.or.kr/academy/board/academyNewsView.fa?MENU_ID=080100&NUM=1644
 
