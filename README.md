@@ -28,9 +28,9 @@ http://www.kiise.or.kr/academy/board/academyNewsView.fa?MENU_ID=080100&NUM=1644
 ![http://openhg.ml](/pptimg/use.png?raw=true "실례")
 
 
-## 사이트: http://openhg.ml
+## 사이트: http://ophg.ml
 
-접속 안될 경우: http://175.123.137.223:6969
+접속 안될 경우: http://openhg.pythonanywhere.com
 
 
 ## 동영상: https://youtu.be/3lgYaszL1Pg
@@ -42,6 +42,7 @@ http://www.kiise.or.kr/academy/board/academyNewsView.fa?MENU_ID=080100&NUM=1644
 
 ### other dependencies
 
+```bash
 pip3 install django-bootstrap-themes
 
 pip3 install django-ipware
@@ -53,7 +54,7 @@ pip3 install json
 ### run web application
 
 python manage.py runserver 0.0.0.0:5959
-
+```
 * * *
 ## Final Round Presentation
 
